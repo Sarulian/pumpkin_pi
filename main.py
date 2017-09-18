@@ -10,7 +10,7 @@ def main():
 	# output, errors = path.communicate()
 	# print(output)
 
-	sub.run('mpg321', 'monstermoan.mp3')
+	sub.run('mpg321 monstermoan.mp3')
 
 
 if __name__ == "__main__":
