@@ -7,7 +7,7 @@ def main():
 	# GPIO.setmode(GPIO.BOARD)
 
 	path = sub.Popen(['ls','-a'],stdout=sub.PIPE,stderr=sub.PIPE)
-	output, errors = p.communicate()
+	output, errors = path.communicate()
 	print(output)
 
 
