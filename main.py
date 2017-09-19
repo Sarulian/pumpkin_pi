@@ -21,7 +21,7 @@ def main():
 
 	
 
-	p = sub.run(['mpg321','monstermoan.mp3'])
+	p = sub.Popen(['mpg321','monstermoan.mp3'])
 	time.sleep(2)
 	p.kill()
 
