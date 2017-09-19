@@ -16,8 +16,8 @@ def main():
 	#initialize GPIO pins
 	blue_led = 33
 	red_led = 32
-	blue_button = 26
-	red_button = 19
+	blue_button = 37
+	red_button = 35
 	GPIO.setmode(GPIO.BOARD)
 	# outputs
 	GPIO.setup(blue_led, GPIO.OUT)
