@@ -22,7 +22,7 @@ def main():
 	GPIO.output(blue_led, 0)
 	GPIO.output(red_led, 0)
 
-	for i in range(r.randint(1,10)):
+	for i in range(r.randint(3,12)):
 		total = 200
 		length = r.randint(int(total/10),int(total/3))
 		start = r.randint(0,total-length)
