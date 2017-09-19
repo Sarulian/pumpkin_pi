@@ -65,7 +65,7 @@ def main():
 				try:
 					play_sound.wait(timeout=0.1)
 					break
-				except TimeoutExpired:
+				except sub.TimeoutExpired:
 					print("continuing loop")
 			p.stop()
 
