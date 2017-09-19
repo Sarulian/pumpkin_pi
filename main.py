@@ -20,9 +20,11 @@ def main():
 	GPIO.setup(blue_led, GPIO.OUT)
 	GPIO.setup(red_led, GPIO.OUT)
 
-	
-
-	sub.run(['mpg321','Electric.mp3', '-k {}'.format(r.randint(0,100)), '-n {}'.format(r.randint(100,200))])
+	while true:
+		total = 200
+		length = r.randint(0,total)
+		start = r.randint(0,total-length)
+		sub.run(['mpg321','Electric.mp3', '-k {}'.format(start), '-n {}'.format(start+length)])
 
 
 if __name__ == "__main__":
