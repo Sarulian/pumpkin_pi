@@ -16,8 +16,7 @@ def main():
 	#initialize GPIO pins
 	blue_led = 33
 	red_led = 32
-	blue_button = 37
-	red_button = 35
+	start_button = 37
 	GPIO.setmode(GPIO.BOARD)
 	# outputs
 	GPIO.setup(blue_led, GPIO.OUT)
@@ -25,12 +24,11 @@ def main():
 	GPIO.output(blue_led, 0)
 	GPIO.output(red_led, 0)
 	# inputs
-	GPIO.setup(blue_button, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-	GPIO.setup(red_button, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+	GPIO.setup(start_button, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 	# main loop
 	while True:
-		if GPIO.input(blue_button):
+		if GPIO.input(start_button):
 			for i in range(r.randint(3,12)):
 				total = 55
 				length = r.randint(int(total/7),int(total/2))
@@ -68,6 +66,13 @@ def main():
 					break
 				except sub.TimeoutExpired:
 					continue
+
+			turn_on(blue_led)
+			turn_on(red_led)
+			sub.run(['mpg321','monstermoan.mp3'])
+			turn_off(blue_led)
+			turn_off(red_led)
+
 
 
 if __name__ == "__main__":
