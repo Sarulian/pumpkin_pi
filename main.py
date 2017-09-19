@@ -62,8 +62,11 @@ def main():
 				if duty == 0:
 					brightening = True
 
-				if play_sound.wait(timeout=0.1):
+				try:
+					play_sound.wait(timeout=0.1)
 					break
+				except TimeoutExpired:
+					print("continuing loop")
 			p.stop()
 
 			print(play_sound.returncode)
