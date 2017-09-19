@@ -22,7 +22,7 @@ def main():
 
 	
 
-	sub.run(['mpg321','Electric.mp3', '-k {}'.format(r.randint(0,100)), '-n {}'.format(r.randint(0,100))])
+	sub.run(['mpg321','Electric.mp3', '-k {}'.format(r.randint(0,50)), '-n {}'.format(r.randint(0,50))])
 
 
 if __name__ == "__main__":
