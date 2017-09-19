@@ -63,7 +63,7 @@ def main():
 					brightening = True
 
 				try:
-					play_sound.wait(timeout=0.005)
+					play_sound.wait(timeout=0.004)
 					break
 				except sub.TimeoutExpired:
 					continue
