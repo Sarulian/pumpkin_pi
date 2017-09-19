@@ -20,7 +20,7 @@ def main():
 	GPIO.setup(blue_led, GPIO.OUT)
 	GPIO.setup(red_led, GPIO.OUT)
 
-	while true:
+	while True:
 		total = 200
 		length = r.randint(0,total)
 		start = r.randint(0,total-length)
