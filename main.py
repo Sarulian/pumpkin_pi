@@ -46,7 +46,6 @@ def main():
 			sub.run(['mpg321','ESPARK1.mp3'])
 			turn_off(blue_led)
 
-
 			# play heartbeat sound with red led pulsing in beat
 			play_sound = sub.Popen(['mpg321','heartbeat.mp3','-l 3'])
 			freq = 200
@@ -75,7 +74,7 @@ def main():
 			# monster moan to finish it off
 			turn_on(blue_led)
 			p.ChangeDutyCycle(100)
-			sub.run(['mpg321','monstermoan.mp3'])
+			sub.run(['mpg321','Evil_Laugh.mp3'])
 			turn_off(blue_led)
 			p.stop()
 
