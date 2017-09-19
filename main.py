@@ -42,7 +42,7 @@ def main():
 				i += 1
 
 		if GPIO.input(red_button):
-			play_sound = sub.Popen(['mpg321','monstermoan.mp3'])
+			play_sound = sub.Popen(['mpg321','heartbeat.mp3','-l 3'])
 
 			freq = 200
 			duty = 0
