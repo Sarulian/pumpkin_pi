@@ -24,7 +24,7 @@ def main():
 
 	while True:
 		total = 200
-		length = r.randint(0,total/2)
+		length = r.randint(total/10,total/3)
 		start = r.randint(0,total-length)
 		turn_on(blue_led)
 		sub.run(['mpg321','Electric.mp3', '-k {}'.format(start), '-n {}'.format(start+length)])
