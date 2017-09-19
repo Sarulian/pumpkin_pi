@@ -41,7 +41,7 @@ def main():
 				time.sleep(r.random()/3)
 				i += 1
 
-		if GPIO.input(red_button):
+
 			play_sound = sub.Popen(['mpg321','heartbeat.mp3','-l 3'])
 
 			freq = 200
@@ -68,8 +68,6 @@ def main():
 				except sub.TimeoutExpired:
 					continue
 			p.stop()
-
-			print(play_sound.returncode)
 
 
 if __name__ == "__main__":
