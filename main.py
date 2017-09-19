@@ -32,11 +32,11 @@ def main():
 	while True:
 		if GPIO.input(blue_button):
 			for i in range(r.randint(3,12)):
-				total = 200
+				total = 55
 				length = r.randint(int(total/10),int(total/3))
 				start = r.randint(0,total-length)
 				turn_on(blue_led)
-				sub.run(['mpg321','Electric.mp3', '-k {}'.format(start), '-n {}'.format(start+length)])
+				sub.run(['mpg321','ESPARK1.mp3', '-k {}'.format(start), '-n {}'.format(start+length)])
 				turn_off(blue_led)
 				time.sleep(r.random()/2)
 				i += 1
@@ -66,7 +66,7 @@ def main():
 					play_sound.wait(timeout=0.01)
 					break
 				except sub.TimeoutExpired:
-					print("continuing loop")
+					continue
 			p.stop()
 
 			print(play_sound.returncode)
