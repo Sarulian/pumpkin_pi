@@ -22,7 +22,7 @@ def main():
 	GPIO.output(blue_led, 0)
 	GPIO.output(red_led, 0)
 
-	while True:
+	for i in range(r.randint(1,10)):
 		total = 200
 		length = r.randint(int(total/10),int(total/3))
 		start = r.randint(0,total-length)
@@ -30,6 +30,7 @@ def main():
 		sub.run(['mpg321','Electric.mp3', '-k {}'.format(start), '-n {}'.format(start+length)])
 		turn_off(blue_led)
 		time.sleep(r.random()/2)
+		i += 1
 
 
 if __name__ == "__main__":
