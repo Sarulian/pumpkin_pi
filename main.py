@@ -32,6 +32,24 @@ def main():
 		time.sleep(r.random()/2)
 		i += 1
 
+	freq = 200
+	duty = 0
+	brightening = True
+	p = GPIO.PWM(red_led, freq)
+	sub.Popen(['mpg321','monstermoan.mp3'])
+	p.start(duty)
+	while True:
+		p.ChangeDutyCycle(duty)
+		if brightening:
+			duty += 1
+		else
+			duty -= 1
+
+		if duty == 100:
+			brightening = False
+		if duty == 0:
+			brightening = True
+
 
 if __name__ == "__main__":
 	main()
