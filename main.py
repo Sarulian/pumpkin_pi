@@ -50,7 +50,7 @@ def main():
 			p = GPIO.PWM(red_led, freq)
 			
 			p.start(duty)
-			while not play_sound.returncode:
+			while True:
 				p.ChangeDutyCycle(duty)
 				if brightening:
 					duty += 1
@@ -62,10 +62,11 @@ def main():
 				if duty == 0:
 					brightening = True
 
-				time.sleep(0.01)
+				if play_sound.wait(timeout=0.1):
+					break
 			p.stop()
 
-			print(p.returncode)
+			print(play_sound.returncode)
 
 
 if __name__ == "__main__":
