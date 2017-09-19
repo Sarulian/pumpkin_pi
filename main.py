@@ -64,10 +64,10 @@ def main():
 
 				try:
 					play_sound.wait(timeout=0.0045)
+					p.stop()
 					break
 				except sub.TimeoutExpired:
 					continue
-			p.stop()
 
 
 if __name__ == "__main__":
