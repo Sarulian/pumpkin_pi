@@ -42,7 +42,7 @@ def main():
 		p.ChangeDutyCycle(duty)
 		if brightening:
 			duty += 1
-		else
+		else:
 			duty -= 1
 
 		if duty == 100:
