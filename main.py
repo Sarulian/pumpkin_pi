@@ -62,16 +62,15 @@ def main():
 
 				try:
 					play_sound.wait(timeout=0.0045)
-					p.stop()
 					break
 				except sub.TimeoutExpired:
 					continue
 
 			turn_on(blue_led)
-			turn_on(red_led)
+			p.ChangeDutyCycle(100)
 			sub.run(['mpg321','monstermoan.mp3'])
 			turn_off(blue_led)
-			turn_off(red_led)
+			p.stop()
 
 
 
