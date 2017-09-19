@@ -33,7 +33,7 @@ def main():
 		if GPIO.input(blue_button):
 			for i in range(r.randint(3,12)):
 				total = 55
-				length = r.randint(int(total/10),int(total/3))
+				length = r.randint(0,int(total))
 				start = r.randint(0,total-length)
 				turn_on(blue_led)
 				sub.run(['mpg321','ESPARK1.mp3', '-k {}'.format(start), '-n {}'.format(start+length)])
