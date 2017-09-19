@@ -38,7 +38,7 @@ def main():
 				turn_on(blue_led)
 				sub.run(['mpg321','ESPARK1.mp3', '-k {}'.format(start), '-n {}'.format(start+length)])
 				turn_off(blue_led)
-				time.sleep(r.random()/2)
+				time.sleep(r.random()/3)
 				i += 1
 
 		if GPIO.input(red_button):
