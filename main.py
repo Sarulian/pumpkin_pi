@@ -19,10 +19,12 @@ def main():
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setup(blue_led, GPIO.OUT)
 	GPIO.setup(red_led, GPIO.OUT)
+	GPIO.output(blue_led, 0)
+	GPIO.output(red_led, 0)
 
 	while True:
 		total = 200
-		length = r.randint(0,total)
+		length = r.randint(0,total/2)
 		start = r.randint(0,total-length)
 		sub.run(['mpg321','Electric.mp3', '-k {}'.format(start), '-n {}'.format(start+length)])
 
