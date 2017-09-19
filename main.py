@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import subprocess as sub
 import time
+import random as r
 
 
 def turn_on(pin_number):
@@ -21,9 +22,7 @@ def main():
 
 	
 
-	p = sub.Popen(['mpg321','monstermoan.mp3'])
-	time.sleep(2)
-	p.kill()
+	sub.run(['mpg321','Electric.mp3', '-k {}'.format(r.randint(0,100)), '-n {}'.format(r.randint(0,100))])
 
 
 if __name__ == "__main__":
