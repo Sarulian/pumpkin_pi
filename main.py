@@ -29,7 +29,7 @@ def main():
 		turn_on(blue_led)
 		sub.run(['mpg321','Electric.mp3', '-k {}'.format(start), '-n {}'.format(start+length)])
 		turn_off(blue_led)
-		time.sleep(r.randrange(0,2,0.1))
+		time.sleep(r.random())
 
 
 if __name__ == "__main__":
