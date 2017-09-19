@@ -39,6 +39,10 @@ def main():
 				time.sleep(r.random()/3)
 				i += 1
 
+			turn_on(blue_led)
+			sub.run(['mpg321','ESPARK1.mp3', '-k 0', '-n 55'])
+			turn_off(blue_led)
+
 
 			play_sound = sub.Popen(['mpg321','heartbeat.mp3','-l 3'])
 
